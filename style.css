@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'ImpactCustom';
+    src: url('impact2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Deadly Advance';
+    src: url('Deadly Advance.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h2{
+    margin-left: 20px;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    overflow-y: auto; /* Позволяем прокрутку по вертикали */
+    font-family: sans-serif;
+}
+
+.title {
+    font-family: 'Deadly Advance', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 32px; /* Уменьшен размер заголовка для мобильных устройств */
+    margin-top: 20px;
+}
+.element{
+    display: grid;
+    grid-template-columns: 12fr 1fr 1fr;
+}
+/* Стили для контейнера с карточками */
+.cards {
+    width: 100%;
+    max-width: 800px; /* Ограничение ширины контейнера с карточками */
+    padding: 10px; /* Уменьшены отступы внутри контейнера */
+}
+.incrase,
+.discrease{
+    font-size: 20px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+
+.category {
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.category h2 {
+    color: #ffffff;
+    font-size: 20px; /* Уменьшен размер заголовка категории */
+    margin-bottom: 10px;
+}
+.cart-items {
+    display: none; /* Скрыть корзину по умолчанию */
+    margin-top: 20px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #676854;
+    height: 50px;
+    margin-top: 10px;
+    width: 50px;
+    border-radius: 200%;
+    margin-left: 20%;
+}
+.baack-button{
+display: flex;
+justify-content: center;
+align-items: center;
+justify-content: center;
+height: auto;
+padding: 24px;
+min-height: unset;
+border-radius: 50px;
+background-color: #a9a8a8;
+margin: 30px auto;
+max-width: 599px;
+cursor: pointer;
+font-family: Poppins, Arial, Helvetica, sans-serif;
+font-size: 18px;
+color: #f5f6f6;
+font-weight: 700;
+}
+.preperator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+.lolkek{
+    display: flex;
+}
+.card:hover {
+    background-color: #555;
+}
+.send-button {
+    padding: 10px 15px; /* Уменьшены отступы для кнопок */
+    border: none;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+} 
+
+ .send-button:hover {
+    background-color: #ffcc00;
+}
+
+.card.selected {
+    border: 2px solid #ffcc00; /* Выделение выбранной карточки */
+}
+
+/* Стили для кнопок */
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.back-button,
+.next-button,
+.sendButton {
+    padding: 10px 15px; /* Уменьшены отступы для кнопок */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover,
+.next-button:hover,
+.sendButton:hover {
+    background-color: #ffcc00; /* Цвет кнопки при наведении */
+}
+
+/* Стили для контента */
+.content {
+    display: none; /* Скрываем контент до перехода */
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Стили для полей ввода */
+.item {
+    margin-bottom: 10px;
+}
+
+.text {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+input[type="tel"] {
+    width: 60%; /* Ширина поля ввода на 100% для мобильных */
+    padding: 10px; /* Отступ внутри поля ввода */
+    border: none;
+    border-radius: 5px;
+}
+.commentacard {
+    width: 60%; /* Ширина поля ввода на 100% для мобильных */
+    padding: 10px; /* Отступ внутри поля ввода */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Общее для мобильных устройств */
+@media (max-width: 600px) {
+    .title {
+        font-size: 24px; /* Уменьшен размер заголовка для маленьких экранов */
+    }
+
+    .category h2 {
+        font-size: 18px; /* Уменьшен размер заголовка категории для маленьких экранов */
+    }
+
+    .card {
+        font-size: 14px; /* Уменьшен размер текста карточек для маленьких экранов */
+    }
+}
+.end{
+    display: flex;
+    
+}
