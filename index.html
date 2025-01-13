@@ -297,7 +297,7 @@
         </div>
       </div>
       <div class="shop" id="shop">
-        <div class="cart-empty">
+        <div class="cart-empty none" id="cart-empty">
           <div class="icon">🛒</div>
           <h1>Корзина пуста</h1>
           <p>Добавьте товары, чтобы начать покупки.</p>
@@ -345,7 +345,7 @@
       const button1 = document.getElementById("button1");
       const button2 = document.getElementById("button2");
       const home = document.getElementById("home");
-      const shop = document.getElementById("shop");
+      const shop = document.getElementById("cart-empty");
 
       if (buttonNumber === 1) {
         home.classList.remove("none");
